@@ -9,3 +9,6 @@
 * build jar file `mvn clean install -DskipTest=true`
 * build docker file `docker build -t keda-poc:latest .`
 * run `docker run -d -p 8080:8080 keda-poc`
+
+## Deploying KEDA with Helm
+* https://keda.sh/docs/2.14/deploy/#helm

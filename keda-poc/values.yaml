@@ -80,3 +80,6 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+keda:
+    metricsApi: https://demo0486563.mockable.io

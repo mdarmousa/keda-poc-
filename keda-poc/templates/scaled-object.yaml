@@ -1,0 +1,17 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: http-scaledobject
+spec:
+  maxReplicaCount: 12
+  pollingInterval: 11
+  cooldownPeriod: 10    # Optional. Default: 300 seconds
+  minReplicaCount: 1 # Optional. Default: 0
+  scaleTargetRef:
+    name: keda-poc
+  triggers:
+    - type: metrics-api
+      metadata:
+        targetValue: "5"
+        url: {{ .Values.keda.metricsApi }}
+        valueLocation: 'count'
