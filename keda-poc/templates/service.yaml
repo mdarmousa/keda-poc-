@@ -11,5 +11,9 @@ spec:
       targetPort: http
       protocol: TCP
       name: http
+    - port: 9095
+      targetPort: 9095
+      protocol: TCP
+      name: management
   selector:
     {{- include "keda-poc.selectorLabels" . | nindent 4 }}
