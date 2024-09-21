@@ -47,7 +47,7 @@ Selector labels
 */}}
 {{- define "keda-poc.selectorLabels" -}}
 app.kubernetes.io/name: {{ include "keda-poc.name" . }}
-app.kubernetes.io/instance: {{ .Release.Name }}
+{{/*app.kubernetes.io/instance: {{ .Release.Name }}*/}}
 {{- end }}
 
 {{/*
